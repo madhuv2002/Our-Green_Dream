@@ -1,0 +1,255 @@
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Quiz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Our Green Dream</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="submenu">
+								<a href="#">More</a>
+								<ul>
+									<li><a href="left-sidebar.html">About Us</a></li>
+									<li><a href="right-sidebar.html">Calculate Annual Waste Produced</a></li>
+									<li><a href="index.html">Find Eco-Friendly Alternatives</a></li>
+										<li><a href="no-sidebar.html">Support these Restaurants</a></li>
+									<li><a href="quiz.html" >Take A Mini-Quiz</a></li>
+								
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+
+					    <style>
+    
+        /*#table_1 {*/
+        /*    background-color: lightblue;*/
+        /*    border: 4px solid black;*/
+        /*    width: 420px;*/
+        /*    height: 360px;*/
+        /*    color: white;*/
+        /*    text-align: center;*/
+        /*}*/
+
+        #center001 {
+            text-align: center;
+        }
+
+    </style>
+
+    <div id="table_1"><center>
+
+        <h2>>Quiz</h2>
+        <hr>
+        <div id="center001">Question: <text id="q001">0</text> </div>
+        <p id="question01"></p>
+        <p id="msg01"></p>
+        <br />
+        <br />
+        <div id="starter01">
+            <button onclick="begin001()" id="b001">Click Here To Begin The Quiz</button><br />
+        </div>
+        <p id="n001"></p>
+
+        <script>
+            var b = 0;
+            b++;
+            var c = 5;
+            c--;
+            var d = 0;
+            d++;
+
+            function begin001() {
+                document.getElementById("q001").innerHTML = d++;
+                document.getElementById("question01").innerHTML = "What do the 3Rs stand for?" + "<br /><br /><br />" + "<button onclick=ans001() id=q1>Reduce, Reuse, Recycle</button><br />" + "<button onclick=ans002() id=q2>Realize, Ramble, Read</button><br />" + "<button onclick=ans002() id=q3>Reduse, Reach, Read</button><br />";
+document.getElementById("starter01").innerHTML = "";
+}
+function ans001() {
+    // document.getElementById("score001").innerHTML = b++;
+document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
+}
+function ans002() {
+document.getElementById("question01").innerHTML = "That is incorrect! The 3Rs stand for 'Reduce, Reuse, and Recycle.'";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt1() {
+document.getElementById("question01").innerHTML = "Which of the following is NOT a recyclable material?" + "<br /><br /><br />" + "<button onclick=ans004() id=q4>Paper</button><br />" + "<button onclick=ans004() id=q5>Plastic</button><br />" + "<button onclick=ans003() id=q6>Food</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans003() {
+    // document.getElementById("score001").innerHTML = b++;
+    document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
+}
+function ans004() {
+document.getElementById("question01").innerHTML = "That is incorrect! Plastic and Paper CAN be recycled, however, it is not possible to recycle food.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt2() {
+document.getElementById("question01").innerHTML = "How many pounds of waste is produced by the average individual in a year?" + "<br /><br /><br />" + "<button onclick=ans006() id=q4>3790 pounds</button><br />" + "<button onclick=ans006() id=q5>4085 pounds</button><br />" + "<button onclick=ans005() id=q6>1606 pounds</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans005() {
+    // document.getElementById("score001").innerHTML = b++;
+    document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
+}
+function ans006() {
+document.getElementById("question01").innerHTML = "That is incorrect! The average individual produces around 1606 pounds of waste annually.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt3() {
+document.getElementById("question01").innerHTML = "Which of the following is harmful for the environment?" + "<br /><br /><br />" + "<button onclick=ans007() id=q4>Littering</button><br />" + "<button onclick=ans008() id=q5>Reusing</button><br />" + "<button onclick=ans008() id=q6>Recycling</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans007() {
+    // document.getElementById("score001").innerHTML = b++;
+    document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
+}
+function ans008() {
+document.getElementById("question01").innerHTML = "That is incorrect! Reusing and Recycling are two methods to help protect the envirnment, while Littering pollutes it.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt4() {
+document.getElementById("question01").innerHTML = "Which of the following is an example of reusing?" + "<br /><br /><br />" + "<button onclick=ans0010() id=q4>Using fewer napkins while eating</button><br />" + "<button onclick=ans009() id=q5>Washing a water bottle after use and using it again later</button><br />" + "<button onclick=ans0010() id=q6>Turning off the tap while brushing your teeth</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans009() {
+    // document.getElementById("score001").innerHTML = b++;
+    document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
+}
+function ans0010() {
+document.getElementById("question01").innerHTML = "That is incorrect! Washing a water bottle to use it again in the future is an example of reusing.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt5() {
+document.getElementById("question01").innerHTML = "Which of the following can be recycled?" + "<br /><br /><br />" + "<button onclick=ans0012() id=q4>Plastic Bottles</button><br />" + "<button onclick=ans0012() id=q5>Glass</button><br />" + "<button onclick=ans0011() id=q6>Both</button><br />";
+document.getElementById("n001").innerHTML = "";
+document.getElementById("q001").innerHTML = d++;
+
+}
+function ans0011() {
+    // document.getElementById("score001").innerHTML = b++;
+    document.getElementById("question01").innerHTML = "You are correct! Nice Work :)";
+    document.getElementById("starter01").innerHTML = "";
+    document.getElementById("n001").innerHTML = "<button onclick=nxt6()>Next</button><br />";
+}
+function ans0012() {
+document.getElementById("question01").innerHTML = "That is incorrect! It is possible to recycle BOTH plastic bottles as well as glass.";
+document.getElementById("starter01").innerHTML = "";
+document.getElementById("n001").innerHTML = "<button onclick=nxt6()>Next</button><br />";
+document.getElementById("attempts").innerHTML = c--;
+if (c < 0) {
+    document.getElementById("question01").innerHTML = "";
+    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+    document.getElementById("n001").innerHTML = "";
+}
+}
+function nxt6() {
+document.getElementById("question01").innerHTML = "";
+document.getElementById("msg01").innerHTML = "Good Job completing this Mini-Quiz!! If you want to learn more about how to reduce, reuse, recycle and create a sustainable environment, you can visit this website: https://www.epa.gov";
+document.getElementById("n001").innerHTML = "";
+}
+        </script>
+        </center>
+    </div>
+</body>
+</html>
+
+
+			
+			<!-- Footer -->
+				<footer id="footer">
+
+
+					<ul class="copyright">
+						<li><a href="left-sidebar.html" class="button primary">About Us</a></li>
+							<li><a href="index.html" class="button primary">Home</a></li>
+							<li><a href="no-sidebar.html" class="button primary">Support These Restaurants</a></li>
+							<li><a href="right-sidebar.html" class="button primary">Calculate Individual Waste</a></li>
+							<li><a href="https://www.instagram.com/ourgreendream_/" class="icon circle fa-instagram"></a></li>
+								
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
